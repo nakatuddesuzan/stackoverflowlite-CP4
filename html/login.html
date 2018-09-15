@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+    <script src = "../javascript/main.js"></script>
+    <script src = "../javascript/login.js"></script>
     <div class = "topnav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -25,11 +27,13 @@
 <div class = "body-div">
     <div class = "sform">
     <div>
+        <form id = "loginform">
         <label for="email"><b>Email</b></label><br>
-        <input type="email" placeholder="sue@gmail.com" name ="email" required><br><br>
+        <input type="email" placeholder="sue@gmail.com" name ="email" id = "email" required><br><br>
         <label for="psw"><b>Password</b></label><br>
-        <input type="password" placeholder="" name="psw" required><br><br>
-        <a href = "profile.html"><button type="submit">Log In</button></a><br><br><br> 
+        <input type="password" placeholder="" name="psw" id = "psw" required><br><br>
+        <a href = "profile.html"><button type="submit">Log In</button></a><br><br><br>
+        </form> 
     </div>
     <div>Don't have an account?<a  class = "link" href="signup.html">  Sign up</a></div>
     </div>

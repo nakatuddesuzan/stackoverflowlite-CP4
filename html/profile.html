@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../css/profile.css">
 </head>
 <body>
+    <script src = "../javascript/main.js"></script>
+    <script src = "../javascript/questions.js"></script>
     <div class = "topnav">
         <a href="index.html">Home</a>
         <a href= "about.html">About</a>
@@ -89,8 +91,14 @@
 </div>
     <div class = "column column3">
         <p><em>Write your question here</em></p>
-        <textarea name="question" id="qn" cols="25" rows="5"></textarea><br>
-        <button id = "btn-qn">Post question</button><br><br><br><br>
+        <form id ="postquestionform">
+        <input type="text" id="title" placeholder="Give a title to your question">
+        <hr>
+        <input type="text" id="subject" placeholder="Which language does the question fall into?">
+        <hr> 
+        <textarea name="qtn" id="desc" cols="25" rows="5" placeholder="Describe you question"></textarea><br>
+        <button type = "submit" id = "btn-qn">Post question</button><br><br><br><br>
+        </form>
         <em>Questions asked: </em><a href="#" class = "link1"> 50</a><br><br>
         <em>Answers given: </em><a href="#" class = "link1">100</a>
     </div>
