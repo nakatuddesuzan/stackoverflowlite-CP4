@@ -32,8 +32,5 @@ let fetchAPI = function (url,method,data) {
                 alert(results.message ? results.message : results);
             }
         })
-        .catch(function (error) {
-            return error.message
-        }) 
-
+        .catch((err) => console.log(err))
 };

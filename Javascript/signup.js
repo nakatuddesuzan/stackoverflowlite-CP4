@@ -6,8 +6,8 @@ window.onload = function () {
 
 }
 
-function createUser(event){
-    event.preventDefault()
+function createUser(e){
+    e.preventDefault()
     let username = document.getElementById("dname").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
@@ -20,11 +20,15 @@ function createUser(event){
     let url = "http://127.0.0.1:5000/api/v1/users/signup";
 
     fetchAPI(url,'post',newUser)
-        .then(results => {
+        .then(res => {
+            if(res.status=='409'){
+                console.log(res.status)
+                alert("Sorry, this email already exists, try another one");
+            }
 
-            if (results.status === 201) {
+            else if (res.status === 201) {
                     window.location.href = '../html/login.html';
-                    alert("Account created successfully you can now login with your details")
+                    alert("You have successfully registered")
                 }
         }
     ).catch(function(error){
