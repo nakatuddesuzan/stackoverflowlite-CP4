@@ -6,6 +6,11 @@ img{
 .bio-font{
     font-family: -apple-system;
 }
+.question-link{
+    color: blue;
+    cursor: pointer;
+}
+
 .column {
     box-sizing: border-box;
     float: left;
@@ -35,13 +40,14 @@ img{
 }
 
 .fa {
-    font-size: 16px;
+    color:rgba(0, 0, 0, 0.445);
+    font-size: 20px;
     cursor: pointer;
     user-select: none;
 }
 
 .fa:hover {
-  color: darkblue;
+  color: blue;
 }
 
 .btn-replies{
@@ -76,6 +82,9 @@ img{
 body{
     width: unset;
     height: unset;
+}
+p{
+    font-size: 20px;
 }
 
 @media screen and (max-width: 600px) {
