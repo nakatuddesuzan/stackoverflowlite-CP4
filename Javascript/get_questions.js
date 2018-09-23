@@ -32,4 +32,24 @@ function getoneQuestion(qtn_id){
 
     }
 }
+document.getElementById('del-qn').addEventListener("click", editQuestion)
+function editQuestion(){
+    qtn_id = localStorage.getItem('qtn_id')
+    console.log('hello')
+    if (localStorage.getItem('token')){
+        let url = "http://127.0.0.1:5000/api/v1/question/" + qtn_id;
+    }
+
+    fetchAPI(url,'edit',newQuestion)
+        .then(results => {
+
+            if (results.status === 201) {
+                    alert("Your question has been edited")
+                }
+        }
+    ).catch(function(error){
+        console.log(error)
+    })
+}
+
 getallQuestions();
