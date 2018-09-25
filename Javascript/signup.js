@@ -31,9 +31,10 @@ function createUser(e){
                     alert("You have successfully registered")
                 }
         }
-    ).catch(function(error){
-        console.log(error)
-    })
+    )
+    // .catch(function(error){
+    //     console.log(error)
+    // })
 
 }
 
