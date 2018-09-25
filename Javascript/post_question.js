@@ -24,7 +24,7 @@ function createQuestion(e){
         .then(results => {
 
             if (results.status === 201) {
-                    alert("Your question has been posted")
+                alert("Your question has been posted")
                 }
         }
     ).catch(function(error){

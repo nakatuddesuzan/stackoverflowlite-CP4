@@ -16,6 +16,7 @@ function createReply(e){
         "reply_desc": reply_desc
     };
     let url = "http://127.0.0.1:5000/api/v1/question/" + qtn_id +"/answer";
+    console.log(url)
 
     fetchAPI(url,'post',newReply)
         .then(results => {

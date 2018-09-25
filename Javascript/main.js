@@ -26,6 +26,7 @@ let fetchAPI = function (url,method,data) {
 
             if (ok) {
                 console.log(results);
+                // return Promise.resolve({data,status})
                 return {data: results, status}
             }
             else {

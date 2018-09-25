@@ -1,4 +1,4 @@
-document.getElementById('del-qn').addEventListener("click", deleteQuestion)
+// document.getElementById('del-qn').addEventListener("click", deleteQuestion)
 function deleteQuestion(){
     qtn_id = localStorage.getItem('qtn_id')
     console.log('hello')
@@ -9,7 +9,7 @@ function deleteQuestion(){
     fetchAPI(url,'delete',newQuestion)
         .then(results => {
 
-            if (results.status === 201) {
+            if (results.status === 200) {
                     alert("Your question has been deleted")
                 }
         }
