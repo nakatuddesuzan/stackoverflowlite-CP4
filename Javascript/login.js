@@ -8,7 +8,7 @@ window.onload = function () {
 
 function signinUser(event) {
     event.preventDefault()
-    let url = "http://127.0.0.1:5000/api/v1/users/login";
+    let url = "https://sue-stack-db.herokuapp.com/api/v1/users/login";
     let email = document.getElementById("email").value;
     let password = document.getElementById("psw").value;
 

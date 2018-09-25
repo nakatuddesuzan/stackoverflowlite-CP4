@@ -17,7 +17,7 @@ function createUser(e){
         "email": email,
         "password": password
     };
-    let url = "http://127.0.0.1:5000/api/v1/users/signup";
+    let url = "https://sue-stack-db.herokuapp.com/api/v1/users/signup";
 
     fetchAPI(url,'post',newUser)
         .then(res => {
