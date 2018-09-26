@@ -22,7 +22,7 @@ function signinUser(event) {
             if(!results) return;
             if (results.status === 200 && results.data.token) {
             localStorage.setItem('token', results.data.token);
-            localStorage.setItem("name", display_name);
+            localStorage.setItem("username", username);
             console.log(localStorage.getItem('token'))
             window.location.href = "profile.html"
         }
