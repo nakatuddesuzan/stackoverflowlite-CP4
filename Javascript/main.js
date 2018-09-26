@@ -7,7 +7,8 @@ let fetchAPI = function (url,method,data) {
 
     const options = {
         method: method,
-        headers: {'Content-Type': 'application/json', 'token': localStorage.getItem('token')}
+        headers: {'Content-Type': 'application/json', 'token': localStorage.getItem('token')},
+        mode: 'cors'
     };
 
     if (data) options.body = JSON.stringify(data)
