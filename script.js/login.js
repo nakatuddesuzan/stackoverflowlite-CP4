@@ -8,21 +8,22 @@ window.onload = function () {
 
 function signinUser(event) {
     event.preventDefault()
-    let url = "https://sue-stack-db.herokuapp.com/api/v1/users/login";
+    let url = "http://127.0.0.1:5000/api/v1/users/login";
     let email = document.getElementById("email").value;
     let password = document.getElementById("psw").value;
 
     let user = {
         "email": email,
         "password": password
+
     };
 
     fetchAPI(url,'post',user)
     .then(results => {
             if(!results) return;
             if (results.status === 200 && results.data.token) {
+            localStorage.setItem("username", results.data.username);
             localStorage.setItem('token', results.data.token);
-            localStorage.setItem("email", email);
             console.log(localStorage.getItem('token'))
             window.location.href = "profile.html"
         }

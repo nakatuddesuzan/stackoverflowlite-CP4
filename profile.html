@@ -17,7 +17,7 @@
         <a href= "login.html">About</a>
         <a  class="active" href="profile.html">Profile</a>
         <div class = "right">
-            <a href="home.html">Log out</a>
+            <a onclick = "Logout()" href="login.html">Log out</a>
             <input type = "text" name = "search" placeholder="search.....">
         </div>
     </div>
@@ -25,7 +25,7 @@
 <div class = "row">
 <div class = "column column1">
     <img src="images/profile.jpg" alt="Profile pic">
-    <a  href = "#">Nakatuddesuzan</a>
+    <a id = "displayname" href = "#"></a>
     <p class = "bio-font">I dream to be a software
         developer at Andela Uganda.
         Currently in bootcamp.

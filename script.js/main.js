@@ -36,3 +36,11 @@ let fetchAPI = function (url,method,data) {
         })
         .catch((err) => console.log(err))
 };
+
+let Logout = function Logout() {
+        localStorage.removeItem('username');
+        localStorage.removeItem('qtn_id');
+        localStorage.removeItem("token");
+
+        window.location.href = 'login.html';
+    }

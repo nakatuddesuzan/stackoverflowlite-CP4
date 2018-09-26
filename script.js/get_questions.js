@@ -1,6 +1,6 @@
 function getallQuestions(){
     if(localStorage.getItem('token')){
-    let url = "https://sue-stack-db.herokuapp.com/api/v1/questions";
+    let url = "http://127.0.0.1:5000/api/v1/questions";
 
     fetchAPI(url,'get')
         .then((res) => res.data)
@@ -20,26 +20,27 @@ function getallQuestions(){
             });
             platformquestions.innerHTML = ""
             document.getElementById('platformquestions').innerHTML = output;
+            document.getElementById('displayname').innerHTML = localStorage.getItem("username");
         })
 }
 }
 function getoneQuestion(qtn_id){
     if (localStorage.getItem('token')){
-    let url = "https://sue-stack-db.herokuapp.com/api/v1/question/" + qtn_id;
+    let url = "http://127.0.0.1:5000/api/v1/questions/" + qtn_id;
     console.log(qtn_id);
-    localStorage.setItem('qtn-id', qtn_id);
+    localStorage.setItem('qtn_id', qtn_id);
     fetchAPI(url,'get')
-    .then((res)=> res.data)
+    // .then((res)=> res.data)
     .then((data)=> console.log(data[4]))
 
     }
 }
 // document.getElementById('del-qn').addEventListener("click", editQuestion())
 function editQuestion(){
-    qtn_id = localStorage.getItem('qtn-id')
+    qtn_id = localStorage.getItem('qtn_id')
     console.log('hello')
     if (localStorage.getItem('token')){
-        let url = "https://sue-stack-db.herokuapp.com/api/v1/question/" + qtn_id;
+        let url = "http://127.0.0.1:5000/api/v1/questions/" + qtn_id;
     }
 
     fetchAPI(url,'edit',newQuestion)
