@@ -24,7 +24,7 @@ function signinUser(event) {
             localStorage.setItem('token', results.data.token);
             localStorage.setItem("name", display_name);
             console.log(localStorage.getItem('token'))
-            window.location.href = "../html/profile.html"
+            window.location.href = "profile.html"
         }
 
         })

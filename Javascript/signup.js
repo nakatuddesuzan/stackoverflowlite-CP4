@@ -27,14 +27,14 @@ function createUser(e){
             }
 
             else if (res.status === 201) {
-                    window.location.href = '../html/login.html';
+                    window.location.href = 'login.html';
                     alert("You have successfully registered")
                 }
         }
     )
-    // .catch(function(error){
-    //     console.log(error)
-    // })
+    .catch(function(error){
+        console.log(error)
+    })
 
 }
 
