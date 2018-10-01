@@ -29,7 +29,7 @@ function createReply(e){
         console.log(error)
     })
 }else{
-    window.location.href = "../html/login.html"
+    window.location.href = "login.html"
     alert("Expired token.Please login again")
 }
 }

@@ -26,11 +26,11 @@ function getallQuestions(){
 }
 function getoneQuestion(qtn_id){
     if (localStorage.getItem('token')){
-    let url = "http://127.0.0.1:5000/api/v1/questions/" + qtn_id;
+    let url = "http://127.0.0.1:5000/api/v1/question/" + qtn_id;
     console.log(qtn_id);
     localStorage.setItem('qtn_id', qtn_id);
     fetchAPI(url,'get')
-    // .then((res)=> res.data)
+    .then((res)=> res.data)
     .then((data)=> console.log(data[4]))
 
     }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>User Profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="../images/logo.png" type="images/png">
+    <link rel="shortcut icon" href="images/logo.png" type="images/png">
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/profile.css">
@@ -26,14 +26,25 @@
 <div class = "column column1">
     <img src="images/profile.jpg" alt="Profile pic">
     <a id = "displayname" href = "#"></a>
-    <p class = "bio-font">I dream to be a software
-        developer at Andela Uganda.
-        Currently in bootcamp.
-        Passionate about learning new things
-        Future employer
-    </p>
-    <button type="reset" class = "btn-profile">Edit bio</button>
-    <button type="reset" class = "btn-profile">Edit profile</button>
+
+    <!-- Trigger/Open The Modal -->
+    <form id="userbio">
+    </form>
+    <button type="submit" class = "btn-profile" id = bio>Edit bio</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <textarea name="qtn" id="addbio" cols="25" rows="5" placeholder="Add your bio"></textarea><br>
+        <button onclick="addBio()" type="submit" id = bio-add>Save</button>
+        
+    </div>
+    
+    </div>
+    <button type="submit" class = "btn-profile">Edit profile</button>
+
 </div>
 <div class = "column column2">
     <div class = "topnav topnav-prof">
@@ -52,15 +63,15 @@
     </div>
 
 </div>
-    <div class = "column column3">
+    <div class = "column column3>
         <p><em>Write your question here</em></p>
-        <form id ="postquestionform">
+        <form id ="postquestionform" >
         <input type="text" id="title" placeholder="Give a title to your question">
         <hr>
         <input type="text" id="subject" placeholder="Which language does the question fall into?">
         <hr> 
         <textarea name="qtn" id="desc" cols="25" rows="5" placeholder="Describe you question"></textarea><br>
-        <button type = "submit" id = "btn-qn">Post question</button><br><br><br><br>
+        <button onclick="createQuestion()" type = "submit" id = "btn-qn">Post question</button><br><br><br><br>
         </form>
         <em>Questions asked: </em><a href="#" class = "link1"> 50</a><br><br>
         <em>Answers given: </em><a href="#" class = "link1">100</a>
@@ -70,6 +81,7 @@
     <script src = "script.js/get_questions.js"></script>
     <script src = "script.js/post_question.js"></script>
     <script src = "script.js/post_reply.js"></script>
+    <script src = "script.js/add_bio.js"></script>
 </body>
 
 <footer>

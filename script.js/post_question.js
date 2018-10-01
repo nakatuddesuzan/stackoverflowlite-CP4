@@ -1,13 +1,5 @@
-window.onload = function () {
-    
-    let postquestionform = document.getElementById('postquestionform');
-    if(postquestionform)
-        postquestionform.onsubmit = createQuestion;
-
-}
-
-function createQuestion(e){
-    e.preventDefault()
+function createQuestion(){
+    // e.preventDefault()
     if(localStorage.getItem('token')){
     let title = document.getElementById("title").value;
     let subject = document.getElementById("subject").value;
@@ -27,11 +19,12 @@ function createQuestion(e){
                 alert("Your question has been posted")
                 }
         }
-    ).catch(function(error){
+    )
+    .catch(function(error){
         console.log(error)
     })
 }else{
-    window.location.href = "../html/login.html"
+    window.location.href = "login.html"
     alert("Expired token.Please login again")
 }
 }
